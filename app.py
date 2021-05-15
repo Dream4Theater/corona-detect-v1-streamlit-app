@@ -1,23 +1,32 @@
-### Script for CS329s ML Deployment Lec 
 import SessionState
 import streamlit as st
 import tensorflow as tf
-import numpy as np
 
-model = tf.keras.models.load_model('Xception.h5')
-model.compile(optimizer='adam', loss='categorical_crossentropy',metrics=['accuracy'])
+tflite_model = 'Xception.tflite'
+interpreter = tf.lite.Interpreter(model_path=tflite_model)
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+interpreter.allocate_tensors()
+
 CLASSES = ['Covid','non-Covid']
 
 ### Streamlit code (works as a straigtht-forward script) ###
 st.title("Corona Detection")
 @st.cache # cache the function so predictions aren't always redone (Streamlit refreshes every click)
-def make_prediction(image, model, class_names):
+def make_prediction(image, class_names):
     x = tf.image.decode_png(image, channels=3)
     x = tf.image.resize(x,[128,128])
     x /= 255.
-    x = tf.cast(tf.expand_dims(x, axis=0), tf.float32)
-
-    preds = model.predict(x, batch_size=10)
+    
+    # input_details[0]['index'] = the index which accepts the input
+    interpreter.set_tensor(input_details[0]['index'], [x])
+    
+    # realizar la prediccion del interprete
+    interpreter.invoke()
+    
+    # output_details[0]['index'] = the index which provides the input
+    preds = interpreter.get_tensor(output_details[0]['index'])
+    
     pred_class = class_names[tf.argmax(preds[0])]
     pred_conf = tf.reduce_max(preds[0])
     return image, pred_class, pred_conf
@@ -45,6 +54,6 @@ if pred_button:
 
 # And if they did...
 if session_state.pred_button:
-    session_state.image, session_state.pred_class, session_state.pred_conf = make_prediction(session_state.uploaded_image, model=model, class_names=CLASSES)
+    session_state.image, session_state.pred_class, session_state.pred_conf = make_prediction(session_state.uploaded_image, class_names=CLASSES)
     st.write(f"Prediction: {session_state.pred_class}, \
                Confidence: {session_state.pred_conf:.3f}")
