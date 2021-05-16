@@ -32,7 +32,8 @@ def make_prediction(image, class_names):
     return image, pred_class, pred_conf
 
 # File uploader allows user to add their own image
-uploaded_file = st.file_uploader(type=["png"])
+uploaded_file = st.file_uploader(label="Upload a corona ct-scan image",
+                                 type=["png"])
 
 # Setup session state to remember state of app so refresh isn't always needed
 # See: https://discuss.streamlit.io/t/the-button-inside-a-button-seems-to-reset-the-whole-app-why/1051/11 
@@ -40,7 +41,7 @@ session_state = SessionState.get(pred_button=False)
 
 # Create logic for app flow
 if not uploaded_file:
-    st.warning("Please upload a corona ct-scan image.")
+    st.warning("Please upload an image.")
     st.stop()
 else:
     session_state.uploaded_image = uploaded_file.read()
