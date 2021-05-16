@@ -32,7 +32,7 @@ def make_prediction(image, class_names):
     return image, pred_class, pred_conf
 
 # File uploader allows user to add their own image
-uploaded_file = st.file_uploader(label="Upload an image",
+uploaded_file = st.file_uploader(label="Upload a corona ct-scan image",
                                  type=["png"])
 
 # Setup session state to remember state of app so refresh isn't always needed
