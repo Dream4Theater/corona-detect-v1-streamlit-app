@@ -24,6 +24,7 @@ def make_prediction(image, model, class_names):
     x = tf.image.resize(x,[128,128])
     x /= 255.
     x = tf.cast(tf.expand_dims(x, axis=0), tf.float32)
+    
     preds = predict_json(project=PROJECT,
                          region=REGION,
                          model=model,
