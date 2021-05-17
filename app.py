@@ -1,14 +1,20 @@
 import SessionState
 import streamlit as st
 import tensorflow as tf
+import os
+import json
+import requests
+from utils import classes_and_models, update_logger, predict_json
 
-tflite_model = 'Xception.tflite'
-interpreter = tf.lite.Interpreter(model_path=tflite_model)
-input_details = interpreter.get_input_details()
-output_details = interpreter.get_output_details()
-interpreter.allocate_tensors()
+# Setup environment credentials (you'll need to change these)
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "crucial-respect-310113-e4c73378cb07" # change for your GCP key
+PROJECT = "My First Project" # change for your GCP project
+REGION = "europe-west1" # change for your GCP region (where your model is hosted)
 
 CLASSES = ['Covid','non-Covid']
+
+CLASSES = classes_and_models["model_1"]["classes"]
+MODEL = classes_and_models["model_1"]["model_name"]
 
 ### Streamlit code (works as a straigtht-forward script) ###
 st.title("Corona Detection")
@@ -18,15 +24,10 @@ def make_prediction(image, class_names):
     x = tf.image.resize(x,[128,128])
     x /= 255.
     
-    # input_details[0]['index'] = the index which accepts the input
-    interpreter.set_tensor(input_details[0]['index'], [x])
-    
-    # realizar la prediccion del interprete
-    interpreter.invoke()
-    
-    # output_details[0]['index'] = the index which provides the input
-    preds = interpreter.get_tensor(output_details[0]['index'])
-    
+    preds = predict_json(project=PROJECT,
+                         region=REGION,
+                         model=model,
+                         instances=x)
     pred_class = class_names[tf.argmax(preds[0])]
     pred_conf = tf.reduce_max(preds[0])
     return image, pred_class, pred_conf
