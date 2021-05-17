@@ -19,7 +19,7 @@ MODEL = classes_and_models["model_1"]["model_name"]
 ### Streamlit code (works as a straigtht-forward script) ###
 st.title("Corona Detection")
 @st.cache # cache the function so predictions aren't always redone (Streamlit refreshes every click)
-def make_prediction(image, class_names):
+def make_prediction(image, model, class_names):
     x = tf.image.decode_png(image, channels=3)
     x = tf.image.resize(x,[128,128])
     x /= 255.
@@ -55,6 +55,6 @@ if pred_button:
 
 # And if they did...
 if session_state.pred_button:
-    session_state.image, session_state.pred_class, session_state.pred_conf = make_prediction(session_state.uploaded_image, class_names=CLASSES)
+    session_state.image, session_state.pred_class, session_state.pred_conf = make_prediction(session_state.uploaded_image, model=MODEL, class_names=CLASSES)
     st.write(f"Prediction: {session_state.pred_class}, \
                Confidence: {session_state.pred_conf:.1f}")
