@@ -7,9 +7,9 @@ import requests
 from utils import classes_and_models, update_logger, predict_json
 
 # Setup environment credentials (you'll need to change these)
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "covid-test-project-314008-d3dc2b3ab1c0.json" # change for your GCP key
-PROJECT = "covid-test-project" # change for your GCP project
-REGION = "us-central1" # change for your GCP region (where your model is hosted)
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "covid-detection-streamlit-app-c48627da8b96.json" # change for your GCP key
+PROJECT = "covid-detection-streamlit-app" # change for your GCP project
+REGION = "europe-west1" # change for your GCP region (where your model is hosted)
 
 CLASSES = ['Covid','non-Covid']
 

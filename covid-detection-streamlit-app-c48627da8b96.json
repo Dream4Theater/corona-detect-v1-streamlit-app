@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "covid-detection-streamlit-app",
+  "private_key_id": "c48627da8b9604bd3ef24255dee77a875007773a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQClZwe6kFUarXjU\nsK4YefXMWTXbJHo1M4fE8N7XNe5QHI9O3YxnpW0iQMWILWvt5nl4tnI1P3RoU6Vc\nXg1nTKzjILc9ZRur5cZk9CRbPZo4icPMd1SMwYDoi1p+1JA+UG5Eeb4XvIsVBBqL\nNEtJVO7p5598ui7yQgvcybL+MfO8JrYHt2lmxN5XsAZ4td5cylmoIvYpGu2fTD3T\nFX9IluM5LMcNbdL9hFdp9uUHtuiDUZNiueEr53NYDIHQSWPR6pC7pRi0t3or/mjo\nlqQIeZT5qMC5sv7Q0MkBGcIhZudifwue4002MxnnvPo/Un4x6bk+PzEkdSROQElj\nE6RWkqLXAgMBAAECggEANG5FAmw3NgYwS8eX4FVkx7qtukJFZPDpRFIQaYsEeKuc\n9+R92esT/awnkaPIVzjcX5oB+QQc2+dL/0wnFow1L6hSvaj7zRFAwwarMasE5JAz\nG3DmQdojCVQHQzYRZVdspNMsoWyYb/iFi4Pvq5a7RzUvlsOUFyI9jWb4kOB3wTfH\nn+jqQReD/RHE7WMrqZOBMJS4rWLDpzi9ZopJ1UW+M+3AdKXGkcJVOF1l0dYfdmLX\ncBaAO6LE5n9n2r4noELwlAgFnin10DvklgbzF27FstTpp6OMRwISv2brqm2Qg5F1\nlaRi7i6UTANYqc32DFaV1pcGu+q0u/zmYD3Ana9jeQKBgQDWp3dD0pMCIhW9syEI\nBzmBO3nDdUwLBipK4X7Fziw3vTwiTOs0okTNpCCnB5HtGDVyiXwMZoQZrpldRx46\nbPKcbZQkVDI+2uBcdQdLh8T1PAfdCejnZ1FGfviwKi9+PYcfirDK7NVqZWLTwhpg\nzCXk6tNqDk6aShig83NJrGGYqQKBgQDFQvounIWLF/BCrrJeQ5W0FvHTUQExR4hI\nPRm9+arJIwgVPFn81bzva8+r/0UvHlwXi7agqZNUIC0aDBq5hd0MqUv9xVg5E/A0\nMYP1Pnp1cQKVsFqQow9KAJ7il7GEn2O+qwqCG2hv/xAy9TxOcEZQN5XhdUCjD1el\nBVjI/EYPfwKBgQDA48QcwkEwjYiT60AngrZ+FwAYUHOBBI1EtNXC0r6RaA99kzlZ\nFuhVEsP01KyhLjv5LOq4CfdzTJ6sX5geUIDDaQTSkIaGTRGIg/GGQf8PkF5QlvMf\n3ov+mWLIi2AaRRgDlBHCiIhPD8R7HdWuXkU/LHXGvAyOQT9Ygux6q9kX4QKBgCjf\nLs03myftxtdaMRT89ejBlEuPjiqywpcNKedF8tAIFSWpQo/zjVkiQn5FvwT7SmOK\njEWPvToCDLZH6cWk6d80uM0U9aml6vA1jjzjPCZXSwzO5ITxdDqGFGWovpxXFiis\ncdnxadtCww176InsE3WNft2fGMxwYl2L1RCXzMBrAoGAf2a3KjrQ3SWmjEcLiVdV\n5iDcMqLbqt41PCMofddSVYA5s3wBJIBv3tVqQu4GAvZFmwVld2DU/HdZiMjVjVm0\n9btEA6m7PaEUsi5HgvkeRSOJXoX4TP7+UYmc9zEfNuDluKmLiuCPlAT/EZF16G/U\nAJIcd87QI8N9aosOva5Ewiw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "covid-streamlit-app-services@covid-detection-streamlit-app.iam.gserviceaccount.com",
+  "client_id": "104311263345950046141",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/covid-streamlit-app-services%40covid-detection-streamlit-app.iam.gserviceaccount.com"
+}
