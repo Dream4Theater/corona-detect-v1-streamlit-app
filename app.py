@@ -7,7 +7,7 @@ import requests
 from utils import classes_and_models, update_logger, predict_json
 
 # Setup environment credentials (you'll need to change these)
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "crucial-respect-310113-e4c73378cb07" # change for your GCP key
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "crucial-respect-310113-e4c73378cb07.json" # change for your GCP key
 PROJECT = "My First Project" # change for your GCP project
 REGION = "europe-west1" # change for your GCP region (where your model is hosted)
 
