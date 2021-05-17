@@ -1,3 +1,5 @@
 tensorflow
-numpy
 streamlit
+requests
+google_api_python_client
+protobuf
