@@ -42,22 +42,24 @@ auth.authenticate_user()
 !gsutil cp -r <your_saved_model_path> gs://<your_bucket_name>
 ```
 
-Your model should appear on bucket now u upload your model to GCP.
+4. Your model should appear on bucket now u upload your model to GCP.
 
 ![alt text](https://github.com/Dream4Theater/corona-detect-v1-streamlit-app/blob/master/images/image3.png?raw=true)
 
-So with working your model u need version of it.
+5. So with working your model u need version of it.
 
 ![alt text](https://github.com/Dream4Theater/corona-detect-v1-streamlit-app/blob/master/images/image4.png?raw=true)
 
-And finally u should add API service to app work.
+6. And finally u should add API service to app work.
 
 ![alt text](https://github.com/Dream4Theater/corona-detect-v1-streamlit-app/blob/master/images/image5.png?raw=true)
 
-And now u good to go if everything is okay ur project should be looking like this [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dream4theater/corona-detect-v1-streamlit-app/app.py/)
+## Deploying Streamlit
 
-## License
+If u wanna know how to deploy a project on Streamlit share u should check out [here.](https://blog.streamlit.io/deploying-streamlit-apps-using-streamlit-sharing/)
 
-Streamlit is completely free and open-source and licensed under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license.
+## Conclusion
 
+If u deploy your project to Streamlit, it should be looking like this [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dream4theater/corona-detect-v1-streamlit-app/app.py/)
 
+This was my school project, for those of u did not understand how i managing things u should absolutely checkout Daniel Bourke's this [Github Project](https://github.com/mrdbourke/cs329s-ml-deployment-tutorial) github project how i learned things first place.
