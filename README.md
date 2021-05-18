@@ -60,6 +60,7 @@ If u wanna know how to deploy a project on Streamlit share u should check out [h
 
 ## Conclusion
 
-If u deploy your project to Streamlit, it should be looking like this [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dream4theater/corona-detect-v1-streamlit-app/app.py/) if code doesn't working that means i am out of free credits from GCP so u should be careful how u spend it.
+If u deploy your project to Streamlit, it should be looking like this [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dream4theater/corona-detect-v1-streamlit-app/app.py/)
+In case code doesn't working that means i am out of free credits from GCP so u should be careful how u spend it.
 
 This was my school project, for those of u did not understand how i managing things u should absolutely checkout Daniel Bourke's this [Github Project](https://github.com/mrdbourke/cs329s-ml-deployment-tutorial) github project how i learned things first place.
