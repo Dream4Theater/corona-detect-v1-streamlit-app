@@ -1,19 +1,12 @@
-# Corona Detection from Ct-Scan Images :wave:
+# Corona Detection from Ct-Scan Images
 
-[![Documentation Status](https://readthedocs.com/projects/streamlit-streamlit/badge/?version=latest)](https://docs.streamlit.io/en/latest/?badge=latest)
-
-**The fastest way to build and share data apps.**
-
-Streamlit lets you turn data scripts into sharable web apps in minutes, not weeks. It's all Python, open-source, and free! And once you've created an app you can use our [free sharing platform](https://streamlit.io/sharing) to deploy, manage, and share your app with the world.
-
-## Installation
+## Installation of Streamlit
 
 ```bash
 pip install streamlit
 streamlit hello
 ```
-
-Streamlit can also be installed in a virtual environment on [Windows](https://github.com/streamlit/streamlit/wiki/Installing-in-a-virtual-environment#on-windows), [Mac](https://github.com/streamlit/streamlit/wiki/Installing-in-a-virtual-environment#on-mac--linux), and [Linux](https://github.com/streamlit/streamlit/wiki/Installing-in-a-virtual-environment#on-mac--linux).
+## Installation of Project
 
 ```bash
 git clone https://github.com/Dream4Theater/corona-detect-v1-streamlit-app
