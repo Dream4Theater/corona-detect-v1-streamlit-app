@@ -16,15 +16,13 @@ That way u can easily get source code and run application on your local host. Bu
 
 ## Installation of GCP
 
-U should first create a project from GCP.
+1. U should first create a project from GCP.
 
-![alt text](https://github.com/Dream4Theater/corona-detect-v1-streamlit-app/blob/master/images/image1.png?raw=true)
-
-Then create a bucket for your project for adding model.
+2. Then create a bucket for your project for adding model.
 
 ![alt text](https://github.com/Dream4Theater/corona-detect-v1-streamlit-app/blob/master/images/image2.png?raw=true)
 
-For adding model , i am using colab, u can add your trained model to bucket running this code.
+3. For adding model , i am using colab, u can add your trained model to bucket running this code.
 
 ```bash
 from tensorflow import keras
@@ -44,13 +42,17 @@ auth.authenticate_user()
 !gsutil cp -r <your_saved_model_path> gs://<your_bucket_name>
 ```
 
-Your model should appear on bucket now u upload your model to GCP and add a version.
+Your model should appear on bucket now u upload your model to GCP.
 
 ![alt text](https://github.com/Dream4Theater/corona-detect-v1-streamlit-app/blob/master/images/image3.png?raw=true)
 
-And finally u should add API service to app work.
+So with working your model u need version of it.
 
 ![alt text](https://github.com/Dream4Theater/corona-detect-v1-streamlit-app/blob/master/images/image4.png?raw=true)
+
+And finally u should add API service to app work.
+
+![alt text](https://github.com/Dream4Theater/corona-detect-v1-streamlit-app/blob/master/images/image5.png?raw=true)
 
 And now u good to go if everything is okay ur project should be looking like this [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dream4theater/corona-detect-v1-streamlit-app/app.py/)
 
