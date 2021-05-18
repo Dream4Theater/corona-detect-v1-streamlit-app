@@ -12,14 +12,17 @@ streamlit hello
 git clone https://github.com/Dream4Theater/corona-detect-v1-streamlit-app
 streamlit run app.py
 ```
-That way u can easily get source code and run application on your local host.
+That way u can easily get source code and run application on your local host. But it will give errors because u need GCP project for image prediction.
 
 ## Installation of GCP
 
 U should first create a project from GCP.
-![Uploading image.png…]()
+
+![alt text](https://github.com/Dream4Theater/corona-detect-v1-streamlit-app/blob/master/images/image1.png?raw=true)
 
 Then create a bucket for your project for adding model.
+
+![alt text](https://github.com/Dream4Theater/corona-detect-v1-streamlit-app/blob/master/images/image2.png?raw=true)
 
 For adding model , i am using colab, u can add your trained model to bucket running this code.
 
@@ -41,9 +44,15 @@ auth.authenticate_user()
 !gsutil cp -r <your_saved_model_path> gs://<your_bucket_name>
 ```
 
-## Project site
+Your model should appear on bucket now u upload your model to GCP and add a version.
 
-U can also check how is project is looking by clicking [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dream4theater/corona-detect-v1-streamlit-app/app.py/) here.
+![alt text](https://github.com/Dream4Theater/corona-detect-v1-streamlit-app/blob/master/images/image3.png?raw=true)
+
+And finally u should add API service to app work.
+
+![alt text](https://github.com/Dream4Theater/corona-detect-v1-streamlit-app/blob/master/images/image4.png?raw=true)
+
+And now u good to go if everything is okay ur project should be looking like this [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dream4theater/corona-detect-v1-streamlit-app/app.py/)
 
 ## License
 
